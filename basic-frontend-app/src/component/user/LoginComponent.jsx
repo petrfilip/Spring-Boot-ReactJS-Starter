@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import AuthService from '../../service/AuthService';
+import {Helmet} from "react-helmet";
 
 class LoginComponent extends React.Component {
 
@@ -42,6 +43,9 @@ class LoginComponent extends React.Component {
     render() {
         return(
             <React.Fragment>
+                <Helmet>
+                    <title>Login | UPCE</title>
+                </Helmet>
                 <AppBar position="static">
                     <Toolbar>
                         <Typography variant="h6">

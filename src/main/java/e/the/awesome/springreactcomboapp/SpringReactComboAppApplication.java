@@ -1,6 +1,6 @@
 package e.the.awesome.springreactcomboapp;
 
-import e.the.awesome.springreactcomboapp.dao.UserDao;
+import e.the.awesome.springreactcomboapp.dao.UserRepository;
 import e.the.awesome.springreactcomboapp.model.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,11 +17,11 @@ public class SpringReactComboAppApplication  extends SpringBootServletInitialize
 	}
 
 	@Bean
-	CommandLineRunner initUser(UserDao userDao, BCryptPasswordEncoder passwordEncoder){
+	CommandLineRunner initUser(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder){
 		return args -> {
-			userDao.deleteAll();
+			userRepository.deleteAll();
 			User user = new User("Devglan", "Devglan", "devglan", passwordEncoder.encode("devglan"), 12345, 34);
-			userDao.save(user);
+			userRepository.save(user);
 		};
 	}
 

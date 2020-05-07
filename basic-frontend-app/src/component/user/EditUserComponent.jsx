@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import NavBar from "../Navbar";
+import {Helmet} from "react-helmet";
 
 class EditUserComponent extends Component {
 
@@ -57,6 +58,9 @@ class EditUserComponent extends Component {
     render() {
         return (
             <React.Fragment>
+                <Helmet>
+                    <title>Edit user | UPCE</title>
+                </Helmet>
                 <NavBar/>
                 <Container>
                     <Typography variant="h4" style={style}>Edit User</Typography>

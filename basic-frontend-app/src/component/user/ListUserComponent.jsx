@@ -11,6 +11,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import NavBar from "../Navbar";
+import {Helmet} from "react-helmet";
 
 class ListUserComponent extends Component {
 
@@ -59,6 +60,9 @@ class ListUserComponent extends Component {
     render() {
         return (
             <React.Fragment>
+                <Helmet>
+                    <title>List user | UPCE</title>
+                </Helmet>
                 <NavBar/>
                 <Container>
                     <Typography variant="h4" style={style}>User Details</Typography>
